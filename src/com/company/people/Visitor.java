@@ -1,6 +1,6 @@
 package com.company.people;
 
-public class Visitors extends People {
+public class Visitor extends People {
 
 
     private int groupSize;
@@ -9,7 +9,7 @@ public class Visitors extends People {
     private String location;
 
 
-    public Visitors(int age, String name, char gender, String race, int groupSize, boolean hasMembership, String location) {
+    public Visitor(int age, String name, char gender, String race, int groupSize, boolean hasMembership, String location) {
         super(age, name, gender, race);
         this.groupSize = groupSize;
         this.hasMembership = hasMembership;

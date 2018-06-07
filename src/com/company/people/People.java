@@ -43,7 +43,4 @@ public class People {
         return race;
     }
 
-    public void setRace(String race) {
-        this.race = race;
-    }
 }
