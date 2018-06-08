@@ -13,7 +13,8 @@ public class Menu {
             System.out.println("Please choose an option. " +
                     "\n1. Manage People" +
                     "\n2. Manage Animals" +
-                    "\n3. Manage Items");
+                    "\n3. Manage Items" +
+                    "\n4. Exit Program");
 
             //Handles user input for navigation
 
@@ -30,17 +31,21 @@ public class Menu {
                     //Manage inventory
                     manageItems();
                     break;
+                case 4:
+                    System.out.println("Thank you for using the Zoo Program.");
+                    System.exit(0);
+                    break;
                 default:
                     //Handle wrong number
-                    System.out.println("That is not a valid entry. Please enter a number between 1 and 3.");
+                    System.out.println("That is not a valid entry. Please enter a number between 1 and 4.");
                     //Restart method to allow user to try again
                     mainMenu();
                     break;
             }
-        } catch(InputMismatchException ime) {
+        } catch (InputMismatchException ime) {
             //Handle if a use puts in something that is not an int
             input.nextLine();
-            System.out.println("That is not a valid entry. Please enter a number between 1 and 3.");
+            System.out.println("That is not a valid entry. Please enter a number between 1 and 4.");
             mainMenu();
         }
 
@@ -58,15 +63,48 @@ public class Menu {
 
     //Handles People Options
     private void managePeople() {
-
         try {
-            //Enter the code that you would like to run that MAY throw an exception
-        } catch(InputMismatchException ime) {
-            //What you want your program to do if this exception happens
+            //Find out if the person is an employee or visitor
+            System.out.println("Are you " +
+                    "\n1. an Employee" +
+                    "\n2. a Visitor" +
+                    "\n3. Go Back" +
+                    "\n4. Exit Program");
+
+
+            switch (input.nextInt()) {
+                case 1:
+                    //Handle Employee
+                    break;
+                case 2:
+                    //Handle Visitor
+                    break;
+                default:
+                    //Handle incorrect input
+                    break;
+                case 3:
+                    //Handles going back to the mainMenu();
+                    break;
+                case 4:
+                    //Handles exiting the program
+                    System.out.println("That is not a valid entry. Please enter a number between 1 and 4.");
+                    break;
+
+
+            }
+        } catch (InputMismatchException ime) {
+            //Handle any input that is not an int
+            input.nextLine();
+            System.out.println("That is not a valid entry. Please enter a number between 1 and 4.");
+        }
+
+
 
         }
 
     }
 
 
-}
+
+
+
